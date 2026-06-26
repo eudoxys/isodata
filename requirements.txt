@@ -1,1 +1,3 @@
-
+pandas
+pip-system-certs
+openpyxl

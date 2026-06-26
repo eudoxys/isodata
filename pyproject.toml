@@ -3,15 +3,15 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.package-data]
-{{{PACKAGE}}} = ["*.py"]
+electricity = ["*.py"]
 
 [tool.setuptools.dynamic]
 dependencies = {file=["requirements.txt"]}
 
 [project]
-name = "{{{PACKAGE}}}"
+name = "electricity"
 version = "0.0.0"
-description = "{{{PACKAGE_DESCRIPTION}}}"
+description = "Electricity operations data accessors"
 authors = [
     {name = "David P. Chassin <dchassin@eudoxys.com>"},
     ]
@@ -19,7 +19,7 @@ maintainers = [
     {name = "David P. Chassin <dchassin@eudoxys.com>"},
     ]
 readme = "README.md"
-keywords = ["github","python","{{{PACKAGE}}}"]
+keywords = ["github","python","electricity"]
 license = {text="MIT License"}
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -31,10 +31,10 @@ classifiers = [
 dynamic=["dependencies"]
 
 [project.urls]
-Homepage = "https://github.com/eudoxys/{{{PACKAGE}}}"
-Documentation = "https://www.eudoxys.com/{{{PACKAGE}}}"
-Repository = "https://github.com/eudoxys/{{{PACKAGE}}}.git"
-Issues = "https://github.com/eudoxys/{{{PACKAGE}}}/issues"
+Homepage = "https://github.com/eudoxys/electricity"
+Documentation = "https://www.eudoxys.com/electricity"
+Repository = "https://github.com/eudoxys/electricity.git"
+Issues = "https://github.com/eudoxys/electricity/issues"
 
 [project.scripts]
-{{{PACKAGE}}} = "{{{PACKAGE}}}.cli:main"
+electricity = "electricity.cli:main"
