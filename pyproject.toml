@@ -3,15 +3,15 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.package-data]
-electricity = ["*.py"]
+isodata = ["*.py"]
 
 [tool.setuptools.dynamic]
 dependencies = {file=["requirements.txt"]}
 
 [project]
-name = "electricity"
+name = "isodata"
 version = "0.0.0"
-description = "Electricity operations data accessors"
+description = "ISO data accessors"
 authors = [
     {name = "David P. Chassin <dchassin@eudoxys.com>"},
     ]
@@ -19,7 +19,7 @@ maintainers = [
     {name = "David P. Chassin <dchassin@eudoxys.com>"},
     ]
 readme = "README.md"
-keywords = ["github","python","electricity"]
+keywords = ["github","python","isodata"]
 license = {text="MIT License"}
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -31,10 +31,10 @@ classifiers = [
 dynamic=["dependencies"]
 
 [project.urls]
-Homepage = "https://github.com/eudoxys/electricity"
-Documentation = "https://www.eudoxys.com/electricity"
-Repository = "https://github.com/eudoxys/electricity.git"
-Issues = "https://github.com/eudoxys/electricity/issues"
+Homepage = "https://github.com/eudoxys/isodata"
+Documentation = "https://www.eudoxys.com/isodata"
+Repository = "https://github.com/eudoxys/isodata.git"
+Issues = "https://github.com/eudoxys/isodata/issues"
 
 [project.scripts]
-electricity = "electricity.cli:main"
+isodata = "isodata.cli:main"

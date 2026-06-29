@@ -56,13 +56,14 @@ class CAISO(pd.DataFrame):
 
     @classmethod
     def _get_version(cls,source,year,month):
+        assert source in cls.VERSION, f"{source=} is not valid"
         keys,values = list(cls.VERSION[source].keys()),list(cls.VERSION[source].values())
         keys.append(f"{datetime.datetime.now().year}-{datetime.datetime.now().month:02.0f}-01")
         values.append(values[-1])
         df = pd.DataFrame(values,pd.DatetimeIndex(keys)).resample("MS").ffill()
         key = f"{year}-{month:02.0f}-01"
         try:
-            return df.loc[key].values[0]
+            return int(df.loc[key].values[0])
         except KeyError:
             return None
 
@@ -100,7 +101,13 @@ class CAISO(pd.DataFrame):
                 break
             call = f"_{source}_v{version}"
             assert call in globals().keys(), f"{year=} is not supported/recognized for {source=}"
-            data.append(globals()[call](year,m))
+            df = globals()[call](year,m)
+            if df is None:
+                warnings.warn(f"CAISO {source} data for {m}/{year} is not available")
+            else:
+                data.append(df)
+        if len(data) == 0:
+            raise ValueError(f"no data found for CAISO {year} {source} for {month=}")
         super().__init__(pd.concat(data,axis=0))
 
 def _ems_v1(
