@@ -1,5 +1,7 @@
 # isodata
 
+[![Deploy Pages](https://github.com/eudoxys/isodata/actions/workflows/deploy_pages.yml/badge.svg)](https://github.com/eudoxys/isodata/actions/workflows/deploy_pages.yml)
+
 Documentation is located at https://www.eudoxys.com/isodata.
 
 Current datasets available are
