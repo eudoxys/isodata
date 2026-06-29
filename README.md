@@ -6,4 +6,4 @@ Current dataset available
 
 | ISO | Dataset | Fields
 | --- | ------- | ------
-| [CAISO](isodata/caiso.html) | `ems` | | `PGE_MW`, `SCE_MW`, `SDGE_MW`, `VEA_MW`, `CAISO_MW`
+| [CAISO](isodata/caiso.html) | `ems` | `PGE_MW`, `SCE_MW`, `SDGE_MW`, `VEA_MW`, `CAISO_MW`

@@ -11,7 +11,7 @@ Example
 
 To download the CAISO EMS data from 2025, do the following
 
-    from caiso import CAISO
+    from isodata import CAISO
     print(CAISO(2025))
 
 which outputs the following
